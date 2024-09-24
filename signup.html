@@ -20,7 +20,7 @@
         <h2 class="pt-5  text-uppercase font-italic font-weight-bold text">Aesthetic Aura</h2>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6 bg-danger border border-danger rounded"> <form>
+                <div class="col-6 bg-danger border border-danger rounded"> <form id="signupForm">
                     <h1 class="text-white my-3 text-uppercase font-italic font-weight-bold m-4">Signup</h1>
                     
                        <div class="container">
@@ -58,4 +58,13 @@
         </div>
       
     </body>
+    
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event){
+            event.preventDefault(); 
+            
+            
+            window.location.href = "product.html";  
+        });
+    </script>
 </html>
