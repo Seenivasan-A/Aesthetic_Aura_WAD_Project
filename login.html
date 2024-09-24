@@ -20,7 +20,7 @@
         <h2 class="pt-5  text-uppercase font-italic font-weight-bold ">Aesthetic Aura</h2>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6 bg-danger border border-danger"> <form class="form">
+                <div class="col-6 bg-danger border border-danger"> <form id="loginForm" class="form">
                     <h1 class="text-white my-3 text-uppercase font-italic font-weight-bold m-4">Login</h1>
                     
                        <div class="container">
@@ -34,14 +34,14 @@
                         </div>
                        </div>
                        <div class="row justify-content-center m-4">
-                        <div class="col-3"> <button type="submit" class="btn btn-success ">Login</button></div>
+                        <div class="col-3"> <button type="submit" class="btn btn-success " href="product.html">Login</button></div>
                        </div>
                        <div class="row">
                         <div class="col-12  text-center text-white text-uppercase  font-weight-bold">
                                 new for Aesthetic Aura? <a class="btn mx-4 btn-success  " href="signup.html">Sign In</a></div>
                          </div>
                          <div class="row justify-content-center m-4">
-                            <div class="col-7"> <a class="text-white text-uppercase ps-5 my-3" href="front.html">forgot password ?</a></div>
+                            <div class="col-7"> <a class="text-white text-uppercase ps-5 my-3" href="product.html">forgot password ?</a></div>
                            </div>
                        
                </fieldset>
@@ -50,4 +50,12 @@
         </div>
       
     </body>
+       <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event){
+            event.preventDefault(); 
+            
+            
+            window.location.href = "product.html";  
+        });
+    </script>
 </html>
