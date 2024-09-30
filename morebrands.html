@@ -36,7 +36,9 @@
                         <li class="nav-item active fw-bold">
                             <a class="nav-link text-white" href="./contact.html">Contact Us</a>
                         </li>
-                       
+                       <li class="nav-item active fw-bold">
+                            <a class="nav-link text-white" href="./admin.html">Admin</a>
+                        </li>
                     </ul>
                 </div>     
     </div>
@@ -215,6 +217,35 @@
         </div>
     </div>
   </section>
+
+    <script>
+    // Increase product count
+    function increaseCount(productId) {
+      let countElement = document.getElementById('product-count-' + productId);
+      let count = parseInt(countElement.value);
+      countElement.value = count + 1;
+    }
+  
+    // Decrease product count
+    function decreaseCount(productId) {
+      let countElement = document.getElementById('product-count-' + productId);
+      let count = parseInt(countElement.value);
+      if (count > 1) {
+        countElement.value = count - 1;
+      }
+    }
+  
+    // Place order functionality
+    function placeOrder(productId) {
+      // Get product name and price
+      let productName = document.getElementById('product-name-' + productId).textContent;
+      let productPrice = document.getElementById('product-price-' + productId).textContent;
+      let productCount = document.getElementById('product-count-' + productId).value;
+  
+      // Show alert with product details
+      alert(`Order placed for ${productName}\nQuantity: ${productCount}\nTotal Price: ${productPrice * productCount}`);
+    }
+  </script>
   
 
     <!-- footer -->
